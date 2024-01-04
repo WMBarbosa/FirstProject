@@ -20,6 +20,7 @@ public class Principal {
         itau.depositar(contaLeo, 30D);
         contaLeo.exibirConta();
 
+        itau.sacar(contaLeo, 100);
 
         System.out.println();
 
@@ -31,6 +32,8 @@ public class Principal {
 
         itau.depositar(contaWesley, 50D);
         contaWesley.exibirConta();
+
+        itau.tranferir(contaWesley, contaLeo, 200);
 
         System.out.println();
 
