@@ -34,9 +34,6 @@ public class Conta implements Comparable <Conta> {
         System.out.println("Numero da Conta: " + getNumeroDaConta());
         System.out.println("Seu saldo é: " + getSaldo());
     }
-    public void inclui(Conta titular) {
-        titular.exibirConta();
-    }
 
     @Override
     public String toString() {
