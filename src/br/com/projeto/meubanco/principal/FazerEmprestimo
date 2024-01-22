@@ -1,0 +1,29 @@
+package br.com.projeto.meubanco.principal;
+
+import br.com.projeto.meubanco.Informacoes.Emprestimos;
+
+import java.util.Scanner;
+
+public class FazerEmprestimo {
+
+    public static void main(String[] args) {
+        Scanner leitura = new Scanner(System.in);
+        System.out.println("Digite o nome do titular");
+        String titular = leitura.next();
+
+        int sair = 1;
+
+        while (sair != 0) {
+            System.out.println("Digite o valor do seu empréstimo: ");
+            double valor = leitura.nextDouble();
+
+            Emprestimos emprestimo = new Emprestimos(titular, 67589);
+            emprestimo.setemprestimos(valor);
+            emprestimo.exibirPedidoDeEmprestimo();
+            emprestimo.jurosEmprestimos();
+
+            System.out.println("Digite 0 para sair ou qualquer outro número para realizar outro empréstimo: ");
+            sair = leitura.nextInt();
+        }
+    }
+}
