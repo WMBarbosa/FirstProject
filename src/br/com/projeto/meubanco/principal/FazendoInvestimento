@@ -23,7 +23,7 @@ public class FazendoInvestimento {
             investimentos.exibirInvestimento();
             investimentos.RendimentoAoAno();
 
-            System.out.println("Digite 0 para sair ou qualquer outro número para realizar outro empréstimo: ");
+            System.out.println("Digite 0 para sair ou qualquer outro número para realizar outro investimento: ");
             sair = leitura.nextInt();
         }
 
