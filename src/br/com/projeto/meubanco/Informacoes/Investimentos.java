@@ -17,16 +17,12 @@ public class Investimentos extends Conta {
         System.out.println("O valor investido foi de: " + getValorInvestimento());
     }
 
-    public double getRendimentos() {
-        System.out.println("Seu investimento terá o redimento de " + rendimentos + "% ao mês" );
-        return rendimentos;
-    }
-
-    public void setRendimentoAoAno(){
+    public void RendimentoAoAno(){
         double lucro = valorInvestimento * tempo * rendimentos / 100;
         valorInvestimento += lucro;
         System.out.println("Seu rendimento durante 1 mês gerou " + lucro);
         System.out.println("Seu saldo atual é: " + valorInvestimento);
+        System.out.println("Seu investimento terá o redimento de " + rendimentos + "% ao mês" );
     }
 
     @Override
