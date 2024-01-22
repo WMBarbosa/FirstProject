@@ -1,0 +1,31 @@
+package br.com.projeto.meubanco.principal;
+
+import br.com.projeto.meubanco.Informacoes.Investimentos;
+
+import java.util.Scanner;
+
+public class FazendoInvestimento {
+
+    public static void main(String[] args) {
+
+        Scanner leitura = new Scanner(System.in);
+        System.out.println("Digite o nome do titular");
+        String titular = leitura.next();
+
+        int sair = 1;
+
+        while (sair != 0){
+            System.out.println("Digite o valor do seu investimento: ");
+            double valor = leitura.nextDouble();
+
+            Investimentos investimentos= new Investimentos (titular, 36798);
+            investimentos.setValorInvestimento(valor);
+            investimentos.exibirInvestimento();
+            investimentos.RendimentoAoAno();
+
+            System.out.println("Digite 0 para sair ou qualquer outro número para realizar outro empréstimo: ");
+            sair = leitura.nextInt();
+        }
+
+    }
+}
