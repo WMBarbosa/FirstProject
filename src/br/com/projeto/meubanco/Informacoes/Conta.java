@@ -1,26 +1,24 @@
 package br.com.projeto.meubanco.Informacoes;
 
-public class Conta {
+public class Conta implements Comparable <Conta> {
     private String Titular;
     private int numeroDaConta;
     private double saldo;
-    private String dadosTitular;
+
+    public Conta(String titular, int numeroDaConta) {
+        Titular = titular;
+        this.numeroDaConta = numeroDaConta;
+    }
 
     public String getTitular() {
         return Titular;
     }
 
-    public void setTitular(String titular) {
-        Titular = titular;
-    }
 
     public int getNumeroDaConta() {
         return numeroDaConta;
     }
 
-    public void setNumeroDaConta(int numeroDaConta) {
-        this.numeroDaConta = numeroDaConta;
-    }
 
     public double getSaldo() {
         return saldo;
@@ -30,13 +28,6 @@ public class Conta {
         this.saldo = saldo;
     }
 
-    public String getDadosTitular() {
-        return dadosTitular;
-    }
-
-    public void setDadosTitular(String dadosTitular) {
-        this.dadosTitular = dadosTitular;
-    }
 
     public void exibirConta(){
         System.out.println("Nome do Titular: " + getTitular());
@@ -46,4 +37,15 @@ public class Conta {
     public void inclui(Conta titular) {
         titular.exibirConta();
     }
+
+    @Override
+    public String toString() {
+        return "Conta: " +  this.getTitular() + " (" + this.getNumeroDaConta() + ") ";
+    }
+
+    @Override
+    public int compareTo(Conta outraConta) {
+        return this.getTitular().compareTo(outraConta.getTitular());
+    }
 }
+
