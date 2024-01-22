@@ -37,20 +37,22 @@ public class Principal {
 
         System.out.println();
 
-        Emprestimos emprestimo1 = new Emprestimos();
-        emprestimo1.inclui(contaLeo);
-        emprestimo1.setemprestimos(5000);
-        emprestimo1.exibirPedidoDeEmprestimo();
-        emprestimo1.jurosEmprestimos();
+        List<Conta> listaDeContas = new ArrayList<>();
+        listaDeContas.add(contaWesley);
+        listaDeContas.add(contaLeo);
+        System.out.println(listaDeContas);
 
         System.out.println();
 
-        Investimentos investimento = new Investimentos();
-        investimento.inclui(contaWesley);
-        investimento.setValorInvestimento(5000);
-        investimento.exibirInvestimento();
-        investimento.getRendimentos();
-        investimento.setRendimentoAoAno();
+        Collections.sort(listaDeContas);
+        System.out.println("Contas Ordenadas");
+        System.out.println(listaDeContas);
+
+        System.out.println();
+
+        listaDeContas.sort(Comparator.comparing(Conta::getNumeroDaConta));
+        System.out.println("Ordenados por numero");
+        System.out.println(listaDeContas);
 
     }
 }
