@@ -8,8 +8,10 @@ public class FazerEmprestimo {
 
     public static void main(String[] args) {
         Scanner leitura = new Scanner(System.in);
-        System.out.println("Digite o nome do titular");
+        System.out.println("Digite o nome do titular: ");
         String titular = leitura.next();
+        System.out.println("Digite seu numero da conta: ");
+        int numeroDaConta = leitura.nextInt();
 
         int sair = 1;
 
@@ -17,7 +19,7 @@ public class FazerEmprestimo {
             System.out.println("Digite o valor do seu empréstimo: ");
             double valor = leitura.nextDouble();
 
-            Emprestimos emprestimo = new Emprestimos(titular, 67589);
+            Emprestimos emprestimo = new Emprestimos(titular, numeroDaConta);
             emprestimo.setemprestimos(valor);
             emprestimo.exibirPedidoDeEmprestimo();
             emprestimo.jurosEmprestimos();
