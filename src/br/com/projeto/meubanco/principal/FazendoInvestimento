@@ -9,8 +9,10 @@ public class FazendoInvestimento {
     public static void main(String[] args) {
 
         Scanner leitura = new Scanner(System.in);
-        System.out.println("Digite o nome do titular");
+        System.out.println("Digite o nome do titular:");
         String titular = leitura.next();
+        System.out.println("Digite o numero de sua conta: ");
+        int numeroDaConta = leitura.nextInt();
 
         int sair = 1;
 
@@ -18,7 +20,7 @@ public class FazendoInvestimento {
             System.out.println("Digite o valor do seu investimento: ");
             double valor = leitura.nextDouble();
 
-            Investimentos investimentos= new Investimentos (titular, 36798);
+            Investimentos investimentos= new Investimentos (titular, numeroDaConta);
             investimentos.setValorInvestimento(valor);
             investimentos.exibirInvestimento();
             investimentos.RendimentoAoAno();
